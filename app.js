@@ -3,7 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var login = require('./controller/login');
-var home = require('./controller/home');
+
 
 var app = express();
 
@@ -13,8 +13,7 @@ app.set('view engine', 'ejs');
 //Middleware
 app.use(bodyParser());
 app.use('/login',login);
-app.use('/home',home);
-//app.use('/',home);
+app.use('/',login);
 
 //Router
 app.get('/', function (req, res){
