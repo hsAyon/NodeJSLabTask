@@ -33,4 +33,13 @@ router.post('/myprofile',function(req, res){
     res.render('member/myprofile.ejs',emp);
 });
 
+// UPDATEPROFILE
+router.get('/updateprofile', function(req, res){
+    res.render('member/update.ejs',emp);
+});
+
+router.post('/updateprofile',function(req, res){
+    res.send('Profile Updated');
+});
+
 module.exports = router;
