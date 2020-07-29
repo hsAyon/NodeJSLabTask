@@ -64,8 +64,29 @@ router.get('/update/:id', function(req, res){
     res.render('member/update.ejs',data);
 });
 
-router.post('/allemployeelist', function(req, res){
+router.post('/update/:id', function(req, res){
     res.send('Employee Updated');
+});
+
+// DELETE
+router.get('/delete/:id', function(req, res){
+    if(req.params.id == '1'){
+        data=emp1;
+    }
+    else if(req.params.id == '2'){
+        data=emp2;
+    }
+    res.render('member/delete.ejs',data);
+});
+
+router.post('/delete/:id', function(req, res){
+    if(req.body.delConf == 'Delete'){
+        res.send('Employee Deleted');
+    }
+    else{
+        res.redirect('/admin/allemployeelist');
+    }
+    
 });
 
 
