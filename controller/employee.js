@@ -17,12 +17,20 @@ router.get('/', function(req, res){
 
 router.post('/',function(req, res){
     if(req.body.empAction == 'My Profile'){
-        res.redirect('/employee/myprofile');
+        res.redirect('employee/myprofile');
     }
     else if(req.body.empAction == 'Update Profile'){
-        res.redirect('/employee/updateprofile');
+        res.redirect('employee/updateprofile');
     }
 });
 
+// MYPROFILE
+router.get('/myprofile', function(req, res){
+    res.render('member/myprofile.ejs',emp);
+});
+
+router.post('/myprofile',function(req, res){
+    res.render('member/myprofile.ejs',emp);
+});
 
 module.exports = router;
