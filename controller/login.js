@@ -13,7 +13,7 @@ router.post('/',function(req, res){
         console.log('Admin logged in');
         res.redirect('/admin');
     }
-    else if(req.body.name == req.body.password == 'employee'){
+    else if(req.body.name == req.body.password && req.body.name == 'employee'){
         console.log('Employee logged in');
         res.redirect('/employee');
     }
