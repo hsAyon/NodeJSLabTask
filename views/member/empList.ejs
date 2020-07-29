@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    th, td{
+        padding: 5px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <form method="post" action="">
+        <fieldset>
+            <legend>Add Employee</legend>
+            <table>
+                <tr>
+                    <th>ID:</th>
+                    <th>Name:</th>
+                    <th>Phone:</th>
+                    <th>Adress:</th>
+                    <th>Gender:</th>
+                    <th>Designation:</th>
+                </tr>
+                <tr>
+                    <td><%=m1.id%></td>  
+                    <td><%=m1.name%></td>    
+                    <td><%=m1.phone%></td>
+                    <td><%=m1.adress%></td>
+                    <td><%=m1.gender%></td>
+                    <td><%=m1.designation%></td>
+                    <td><a href="/admin/update/<%=m1.id%>">Update</a></td>
+                    <td><a href="/admin/delete/<%=m1.id%>">Delete</a></td>
+                </tr>
+                <tr>
+                    <td><%=m2.id%></td>  
+                    <td><%=m2.name%></td>    
+                    <td><%=m2.phone%></td>
+                    <td><%=m2.adress%></td>
+                    <td><%=m2.gender%></td>
+                    <td><%=m2.designation%></td>
+                    <td><a href="/admin/update/<%=m2.id%>">Update</a></td>
+                    <td><a href="/admin/delete/<%=m2.id%>">Delete</a></td>
+                </tr>
+                
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

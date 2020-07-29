@@ -17,7 +17,7 @@ var emp2={
     gender:'Female',
     designation:'Assistant'
 }
-
+// ROOT
 router.get('/', function(req, res){
     res.render('member/admin.ejs');
 });
@@ -31,12 +31,26 @@ router.post('/',function(req, res){
     }
 });
 
+// ADDEMPLOYEE
 router.get('/addemployee', function(req, res){
     res.render('member/addEmp.ejs');
-})
+});
 
 router.post('/addemployee', function(req, res){
     res.send('Employee Added');
-})
+});
+
+// ALLEMPLOYEELIST
+router.get('/allemployeelist', function(req, res){
+    var data ={
+        m1:emp1,
+        m2:emp2
+    }
+    res.render('member/empList.ejs',data);
+});
+
+router.post('/allemployeelist', function(req, res){
+    //res.send('Employee Added');
+});
 
 module.exports = router;
