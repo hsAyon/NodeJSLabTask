@@ -6,9 +6,12 @@ router.get('/',function(req, res){
 });
 
 router.post('/',function(req, res){
-
-    res.render('member/admin.ejs');
-
+    if(req.body.adminAction == 'Add Employee'){
+        res.redirect('/admin/addemployee');
+    }
+    else if(req.body.adminAction == 'All Employee List'){
+        res.redirect('/admin/allemployeelist');
+    }
 });
 
 module.exports = router;

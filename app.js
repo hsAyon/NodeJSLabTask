@@ -16,6 +16,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser());
 app.use('/login',login);
 app.use('/',login);
+app.use('/admin',admin);
 app.use('/employee',employee);
 
 //Router
@@ -23,6 +24,6 @@ app.get('/', function (req, res){
     res.send();
 });
 
-app.listen(3000,function(){
-    console.log('express http server started at 3000')
+app.listen(80,function(){
+    console.log('express http server started at 80')
 });
