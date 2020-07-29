@@ -3,6 +3,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var login = require('./controller/login');
+var admin = require('./controller/admin');
+var employee = require('./controller/employee');
 
 
 var app = express();
@@ -14,6 +16,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser());
 app.use('/login',login);
 app.use('/',login);
+app.use('/employee',employee);
 
 //Router
 app.get('/', function (req, res){
